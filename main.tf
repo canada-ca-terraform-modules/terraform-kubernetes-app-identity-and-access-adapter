@@ -48,6 +48,6 @@ resource "null_resource" "dependency_setter" {
   # https://github.com/hashicorp/terraform/issues/1178#issuecomment-449158607
   # List resource(s) that will be constructed last within the module.
   depends_on = [
-    "helm_release.vault"
+    "helm_release.app_identity_and_access_adapter"
   ]
 }
