@@ -3,11 +3,11 @@ output "helm_service_account" {
 }
 
 output "helm_namespace" {
-  value = "${var.helm_namespace}"
+  value = "istio-system"
 }
 
 output "release_revision" {
-  value = "${helm_release.vault.metadata.0.revision}"
+  value = "${helm_release.app_identity_and_access_adapter.metadata.0.revision}"
 }
 
 # Part of a hack for module-to-module dependencies.
