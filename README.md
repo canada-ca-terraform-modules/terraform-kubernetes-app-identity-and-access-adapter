@@ -1,4 +1,4 @@
-# Terraform Kubernetes Vault
+# Terraform Kubernetes IBM's App Identity and Access Adapter
 
 ## Introduction
 
