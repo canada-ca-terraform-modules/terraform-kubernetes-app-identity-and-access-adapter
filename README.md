@@ -21,7 +21,7 @@ The following security controls can be met through configuration of this templat
 ## Usage
 
 ```terraform
-module "helm_vault" {
+module "helm_app_identity_and_access_adapter" {
   source = "github.com/statcan/terraform-kubernetes-app-identity-and-access-adapter?ref=20200613.1"
 
   chart_version = "0.5.0"
