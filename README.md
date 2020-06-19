@@ -43,7 +43,7 @@ EOF
 | chart_version        | string | yes      | Version of the Helm Chart                           |
 | dependencies         | string | yes      | Dependency name refering to namespace module        |
 | helm_repository      | string | yes      | The repository where the Helm chart is stored       |
-| values               | list   | no       | Values to be passed to the Helm Chart               |
+| values               | string | no       | Values to be passed to the Helm Chart               |
 
 ## History
 
