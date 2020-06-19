@@ -29,7 +29,6 @@ module "helm_app_identity_and_access_adapter" {
     "${module.namespace_istio_system.depended_on}",
   ]
 
-  helm_service_account = "tiller"
   helm_repository = "appidentityandaccessadapter"
 
   values = <<EOF
