@@ -1,5 +1,3 @@
-variable "helm_service_account" {}
-
 variable "helm_release_name" {
   default = "appidentityandaccessadapter"
 }
