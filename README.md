@@ -54,3 +54,4 @@ EOF
 | 20200613 | 20200613.3 | Fix some of the output references.                         |
 | 20200619 | v2.0.0     | Update module to use Helm 3 provider                       |
 | 20200622 | v2.0.1     | Remove wait dependency that was required for Helm2         |
+| 20200622 | v2.0.2     | Add support for helm credentials                           |
