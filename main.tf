@@ -7,7 +7,7 @@
 # module:
 resource "null_resource" "dependency_getter" {
   triggers = {
-    my_dependencies = "${join(",", var.dependencies)}"
+    my_dependencies = join(",", var.dependencies)
   }
 
   lifecycle {
@@ -18,15 +18,15 @@ resource "null_resource" "dependency_getter" {
 }
 
 resource "helm_release" "app_identity_and_access_adapter" {
-  depends_on = ["null_resource.dependency_getter"]
-  name       = "${var.helm_release_name}"
-  repository = "${var.helm_repository}"
-  chart      = "${var.helm_chart}"
-  version    = "${var.chart_version}"
+  depends_on = [null_resource.dependency_getter]
+  name       = var.helm_release_name
+  repository = var.helm_repository
+  chart      = var.helm_chart
+  version    = var.chart_version
   timeout    = 1200
 
   values = [
-    "${var.values}",
+    var.values,
   ]
 
 }
@@ -38,6 +38,6 @@ resource "null_resource" "dependency_setter" {
   # https://github.com/hashicorp/terraform/issues/1178#issuecomment-449158607
   # List resource(s) that will be constructed last within the module.
   depends_on = [
-    "helm_release.app_identity_and_access_adapter"
+    helm_release.app_identity_and_access_adapter
   ]
 }

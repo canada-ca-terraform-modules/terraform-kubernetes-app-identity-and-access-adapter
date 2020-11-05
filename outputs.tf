@@ -3,7 +3,7 @@ output "helm_namespace" {
 }
 
 output "release_revision" {
-  value = "${helm_release.app_identity_and_access_adapter.metadata.0.revision}"
+  value = helm_release.app_identity_and_access_adapter.metadata.0.revision
 }
 
 # Part of a hack for module-to-module dependencies.
