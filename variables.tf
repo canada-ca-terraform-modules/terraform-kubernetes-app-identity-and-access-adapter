@@ -10,6 +10,14 @@ variable "helm_repository" {
   default = "appidentityandaccessadapter"
 }
 
+variable "helm_repository_username" {
+  default = ""
+}
+
+variable "helm_repository_password" {
+  default = ""
+}
+
 variable "chart_version" {}
 
 variable "dependencies" {
