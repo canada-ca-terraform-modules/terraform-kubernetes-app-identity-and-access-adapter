@@ -7,15 +7,24 @@ variable "helm_chart" {
 }
 
 variable "helm_repository" {
-  default = "appidentityandaccessadapter"
+  default     = "appidentityandaccessadapter"
+  description = "The repository where the Helm chart is stored"
 }
 
 variable "helm_repository_username" {
-  default = ""
+  type        = string
+  nullable    = false
+  default     = ""
+  description = "The username of the repository where the Helm chart is stored"
+  sensitive   = true
 }
 
 variable "helm_repository_password" {
-  default = ""
+  type        = string
+  nullable    = false
+  default     = ""
+  description = "The password of the repository where the Helm chart is stored"
+  sensitive   = true
 }
 
 variable "chart_version" {}
