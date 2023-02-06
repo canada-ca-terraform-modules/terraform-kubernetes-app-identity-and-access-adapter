@@ -22,7 +22,7 @@ The following security controls can be met through configuration of this templat
 
 ```terraform
 module "helm_app_identity_and_access_adapter" {
-  source = "https://github.com/canada-ca-terraform-modules/terraform-kubernetes-app-identity-and-access-adapter?ref=v2.0.1"
+  source = "https://github.com/canada-ca-terraform-modules/terraform-kubernetes-app-identity-and-access-adapter?ref=v2.0.3"
 
   chart_version = "0.5.0"
   dependencies = [
@@ -55,3 +55,4 @@ EOF
 | 20200619 | v2.0.0     | Update module to use Helm 3 provider                       |
 | 20200622 | v2.0.1     | Remove wait dependency that was required for Helm2         |
 | 20200622 | v2.0.2     | Add support for helm credentials                           |
+| 20230202 | v2.0.3     | Specify sensitive variables                                |
